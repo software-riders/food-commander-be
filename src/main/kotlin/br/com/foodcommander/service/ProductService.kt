@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class ProductService(val repository: ProductRepository) {
-    fun createProduct(product: Product): Product {
-        return repository.insert(product)
-    }
+    fun createProduct(product: Product): Product = repository.insert(product)
 
 }
