@@ -6,7 +6,9 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class Product(
         @Id
-        val id: String?,
+        val id: String? = null,
         val name: String,
-        val description: String
+        val description: String,
+        val sizes: List<Size>,
+        val urlPicture: String
 )
