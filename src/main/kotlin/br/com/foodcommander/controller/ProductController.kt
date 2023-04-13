@@ -23,7 +23,7 @@ class ProductController(val service: ProductService) {
                 Product(
                     name = productRequest.name,
                     description = productRequest.description,
-                    urlPicture = productRequest.urlPicture ?: "",
+                    urlPicture = productRequest.urlPicture.orEmpty(),
                     sizes = productRequest.sizes.map { Size(it.name, it.price, it.description) }
                 )
         )
