@@ -1,6 +1,5 @@
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: product
+      uri: ${MONGO_DATABASE_URI:mongodb://localhost:27017}
+      database: food-commander
